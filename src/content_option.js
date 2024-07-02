@@ -1,60 +1,78 @@
-const logotext = "JOHN";
+// Import gambar dan data yang dibutuhkan
+const logotext = "ANDI";
 const meta = {
-    title: "John Doe",
-    description: "I’m John Doe data scientist _ Full stack devloper,currently working in Berlin",
+    title: "Andi Arif R.",
+    description: "I’m Andi Arif R. data scientist _ Full stack devloper,currently working in Berlin",
 };
 
 const introdata = {
-    title: "I’m John Doe",
+    title: "I’m Andi Arif R.",
     animated: {
-        first: "I love coding",
-        second: "I code cool websites",
-        third: "I develop mobile apps",
+        first: "I am a Graphic Designer",
+        second: "I code Cool Website",
+        third: "I am a Web Developer",
     },
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum",
-    your_img_url: "https://images.unsplash.com/photo-1514790193030-c89d266d5a9d",
+    description: "Bachelor's in Informatics Engineering with experience in creative industry and IT. Skilled in graphic design and IT support. Ready to contribute to a dynamic, innovative environment.",
+    your_img_url: "/assets/images/profile.png",
 };
 
 const dataabout = {
-    title: "abit about my self",
-    aboutme: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis dolor id ligula semper elementum feugiat pretium nulla. Nunc non commodo dolor. Nunc mollis dignissim facilisis. Morbi ut magna ultricies.",
+    title: "about my self",
+    greeting: "Hello everyone,",
+    aboutme: "I'm Andi, a driven digital marketer with a profound passion for crafting tailored advertising experiences. My professional journey in graphic design has honed my ability to analyze and optimize the effectiveness of online campaigns. I thrive on transforming complex data into actionable insights that enhance ad personalization and consumer engagement. Committed to continuous learning and improvement, I am eager to apply my skills to the role of Personalized Internet Ads Assessor, where I aim to contribute significantly to your team's success. Let's work together to push the boundaries of digital marketing and create innovative, impactful advertising that resonates.",
+    question: "Are you ready for this adventure?",
 };
+
 const worktimeline = [{
-        jobtitle: "Designer of week",
-        where: "YAdfi",
-        date: "2020",
+        jobtitle: "IT Support Technician",
+        where: "PT. Afresto Sistem Indonesia",
+        date: "2020 - Present",
     },
     {
-        jobtitle: "Designer of week",
-        where: "Jamalya",
-        date: "2019",
+        jobtitle: "Personalized Internet Ads Asessor",
+        where: "Telus International AI Data Solution",
+        date: "2019 - 2024",
     },
     {
-        jobtitle: "Designer of week",
-        where: "ALquds",
-        date: "2019",
+        jobtitle: "Ads Quality Rater",
+        where: "Welocalized",
+        date: "2023 - 2023",
+    },
+    {
+        jobtitle: "Search Engine Evaluator",
+        where: "Telus International AI Data Solution",
+        date: "2019 - 2019",
+    },
+    {
+        jobtitle: "Graphic design",
+        where: "PT. Kaisa Rossie Tour & Travel",
+        date: "2017 - 2020",
     },
 ];
 
 const skills = [{
-        name: "Python",
-        value: 90,
-    },
-    {
-        name: "Djano",
-        value: 85,
-    },
-    {
         name: "Javascript",
         value: 80,
     },
     {
         name: "React",
-        value: 60,
+        value: 75,
     },
     {
-        name: "Jquery",
+        name: "PHP",
         value: 85,
+    },
+    {
+        name: "HTML",
+        value: 95,
+    },
+    {
+        name: "CSS",
+        value: 90,
+    },
+    {
+        name: "Graphic Design",
+        value: 90,
     },
 ];
 
@@ -69,6 +87,16 @@ const services = [{
     {
         title: "Wordpress Design",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+    },
+];
+
+const certificates = [{
+        title: "https://picsum.photos/400/?grayscale",
+        description: "The wisdom of life consists in the elimination of non-essentials.",
+    },
+    {
+        title: "https://picsum.photos/400/800/?grayscale",
+        description: "The wisdom of life consists in the elimination of non-essentials.",
     },
 ];
 
@@ -102,7 +130,6 @@ const dataportfolio = [{
         description: "The wisdom of life consists in the elimination of non-essentials.",
         link: "#",
     },
-
     {
         img: "https://picsum.photos/400/600/?grayscale",
         description: "The wisdom of life consists in the elimination of non-essentials.",
@@ -152,12 +179,14 @@ const socialprofils = {
     linkedin: "https://linkedin.com",
     twitter: "https://twitter.com",
 };
+
 export {
     meta,
     dataabout,
     dataportfolio,
     worktimeline,
     skills,
+    certificates,
     services,
     introdata,
     contactConfig,
