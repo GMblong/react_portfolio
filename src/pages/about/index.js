@@ -82,7 +82,7 @@ export const About = () => {
             })}
           </Col>
         </Row>
-        <Row className="sec_sp">
+        {/* <Row className="sec_sp">
           <Col lang="5">
             <h3 className="color_sec py-4">services</h3>
           </Col>
@@ -96,10 +96,10 @@ export const About = () => {
               );
             })}
           </Col>
-        </Row>
+        </Row> */}
         <Row className="sec_sp">
           <Col lang="5">
-            <h3 className="color_sec py-4">certificates</h3>
+            <h3 className="color_sec py-4">Certificates</h3>
           </Col>
           <Col lg="7">
             {certificates.map((data, i) => {

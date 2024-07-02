@@ -17,7 +17,7 @@ const introdata = {
 };
 
 const dataabout = {
-    title: "about my self",
+    title: "Summary",
     greeting: "Hello everyone,",
     aboutme: "I'm Andi, a driven digital marketer with a profound passion for crafting tailored advertising experiences. My professional journey in graphic design has honed my ability to analyze and optimize the effectiveness of online campaigns. I thrive on transforming complex data into actionable insights that enhance ad personalization and consumer engagement. Committed to continuous learning and improvement, I am eager to apply my skills to the role of Personalized Internet Ads Assessor, where I aim to contribute significantly to your team's success. Let's work together to push the boundaries of digital marketing and create innovative, impactful advertising that resonates.",
     question: "Are you ready for this adventure?",
@@ -76,27 +76,35 @@ const skills = [{
     },
 ];
 
-const services = [{
-        title: "UI & UX Design",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
-    },
-    {
-        title: "Mobile Apps",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
-    },
-    {
-        title: "Wordpress Design",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
-    },
-];
+// const services = [{
+//         title: "UI & UX Design",
+//         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+//     },
+//     {
+//         title: "Mobile Apps",
+//         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+//     },
+//     {
+//         title: "Wordpress Design",
+//         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+//     },
+// ];
 
 const certificates = [{
-        title: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
+        title: "Cloud Practitioner Essentials",
+        description: "Dicoding Indonesia",
     },
     {
-        title: "https://picsum.photos/400/800/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
+        title: "Prediction Test of TOEFL",
+        description: "Bina Bahasa Jaya Universitas Semarang",
+    },
+    {
+        title: "Cisco 'CCNA Routing and Switching: Introduction to Networks'",
+        description: "Cisco Networking Academy",
+    },
+    {
+        title: "Motion Graphic 2D - Certificate of Competency",
+        description: "Lembaga Sertifikasi Profesi TIK Indonesia",
     },
 ];
 
@@ -163,21 +171,21 @@ const dataportfolio = [{
 ];
 
 const contactConfig = {
-    YOUR_EMAIL: "name@domain.com",
-    YOUR_FONE: "(555)123-4567",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula eu nunc et sollicitudin. Cras pulvinar, nisi at imperdiet pharetra. ",
+    YOUR_EMAIL: "andiarifrahmatullah@gmail.com",
+    YOUR_FONE: "+62 89609499706",
+    description: "Thank you for visiting my page. I'm glad to hear from you! Please feel free to reach out via email or phone if you have any questions or would like to discuss anything further. I look forward to potentially collaborating with you.",
     // creat an emailjs.com account 
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-    YOUR_SERVICE_ID: "service_id",
-    YOUR_TEMPLATE_ID: "template_id",
-    YOUR_USER_ID: "user_id",
+    YOUR_SERVICE_ID: "service_78pt4qw",
+    YOUR_TEMPLATE_ID: "template_dnnjedh",
+    YOUR_USER_ID: "Dt8CDcJ-UAlaPc0C8",
 };
 
 const socialprofils = {
-    github: "https://github.com",
-    facebook: "https://facebook.com",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
+    github: "https://github.com/GMblong",
+    instagram: "https://instagram.com/andiarif__",
+    linkedin: "https://www.linkedin.com/in/andi-arif-rahmatullah-86722b176/",
+    twitter: "https://x.com/anaknomordua_",
 };
 
 export {
@@ -187,7 +195,7 @@ export {
     worktimeline,
     skills,
     certificates,
-    services,
+    // services,
     introdata,
     contactConfig,
     socialprofils,
