@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
-import Items from "../../components/items";
+import Ages from "../../components/ages";
 import {
   dataabout,
   meta,
@@ -34,7 +34,7 @@ export const About = () => {
           </Col>
           <Col lg="7">
             <div>
-              <Items />
+              <Ages />
             </div>
           </Col>
         </Row>

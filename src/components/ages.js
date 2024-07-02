@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import dayjs from 'dayjs';
 
-const Items = () => {
+const Ages = () => {
   const getAge = () =>
     (dayjs().diff('1998-12-06', 'milliseconds') / (365.25 * 24 * 60 * 60 * 1000)).toFixed(9);
 
@@ -36,4 +36,4 @@ const Items = () => {
   );
 };
 
-export default Items;
+export default Ages;
