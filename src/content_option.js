@@ -8,9 +8,9 @@ const meta = {
 const introdata = {
     title: "I’m Andi Arif R.",
     animated: {
-        first: "I am a Graphic Designer",
-        second: "I code Cool Website",
-        third: "I am a Web Developer",
+        first: "Innovative Graphic Designer",
+        second: "Creative Problem Solver",
+        third: "Passionate Web Developer",
     },
     description: "Bachelor's in Informatics Engineering with experience in creative industry and IT. Skilled in graphic design and IT support. Ready to contribute to a dynamic, innovative environment.",
     your_img_url: "/assets/images/profile.png",

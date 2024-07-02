@@ -5,6 +5,19 @@ import Typewriter from "typewriter-effect";
 import { introdata, meta } from "../../content_option";
 import { Link } from "react-router-dom";
 
+const generateStars = (num) => {
+  const stars = [];
+  for (let i = 0; i < num; i++) {
+    const style = {
+      top: `${Math.random() * 100}%`,
+      left: `${Math.random() * 100}%`,
+      animationDuration: `${Math.random() * 2 + 1}s, ${Math.random() * 5 + 5}s linear infinite`,
+    };
+    stars.push(<div key={i} className="star" style={style}></div>);
+  }
+  return stars;
+};
+
 export const Home = () => {
   console.log(introdata.your_img_url); // Untuk memastikan URL benar
   return (
@@ -16,10 +29,15 @@ export const Home = () => {
           <meta name="description" content={meta.description} />
         </Helmet>
         <div className="intro_sec d-block d-lg-flex align-items-center">
+          <div className="stars">
+            {generateStars(100)}
+          </div>
           <div
             className="h_bg-image order-1 order-lg-2 h-100"
             style={{
               backgroundImage: `url(${introdata.your_img_url})`,
+              position: "relative",
+              zIndex: 1, // Ensure the background image is above the stars
             }}
           ></div>
           <div className="text order-2 order-lg-2 h-100 d-lg-flex justify-content-center">
