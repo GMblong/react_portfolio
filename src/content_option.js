@@ -52,11 +52,11 @@ const worktimeline = [{
 
 const skills = [{
         name: "Javascript",
-        value: 80,
+        value: 75,
     },
     {
         name: "React",
-        value: 75,
+        value: 70,
     },
     {
         name: "PHP",
