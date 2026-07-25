@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
@@ -22,6 +22,24 @@ export const Home = () => {
   const { t, i18n } = useTranslation();
   const introdata = t('introdata', { returnObjects: true });
   const meta = t('meta', { returnObjects: true });
+  
+  // State untuk theme (agar gambar bisa ganti)
+  const [currentTheme, setCurrentTheme] = useState(document.documentElement.getAttribute('data-theme') || 'dark');
+
+  useEffect(() => {
+    // Observer untuk memantau perubahan data-theme di elemen <html>
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'data-theme') {
+          setCurrentTheme(document.documentElement.getAttribute('data-theme'));
+        }
+      });
+    });
+
+    observer.observe(document.documentElement, { attributes: true });
+
+    return () => observer.disconnect();
+  }, []);
 
   console.log(introdata.your_img_url); // Untuk memastikan URL benar
   
@@ -43,7 +61,7 @@ export const Home = () => {
           <div
             className="h_bg-image order-1 order-lg-2 h-100"
             style={{
-              backgroundImage: `url(${introdata.your_img_url})`,
+              backgroundImage: `url(${currentTheme === 'light' ? introdata.your_img_url_light : introdata.your_img_url})`,
               position: "relative",
               zIndex: 1, // Ensure the background image is above the stars
             }}
