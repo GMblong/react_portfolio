@@ -2,12 +2,12 @@ import React from "react";
 import "./style.css";
 import {
   FaGithub,
-  FaTwitter,
   FaInstagram,
   FaLinkedin,
   FaYoutube,
   FaTwitch,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { socialprofils } from "../../content_option";
 
 export const Socialicons = (params) => {
@@ -17,7 +17,7 @@ export const Socialicons = (params) => {
         {socialprofils.twitter && (
           <li>
             <a href={socialprofils.twitter}>
-              <FaTwitter />
+              <FaXTwitter />
             </a>
           </li>
         )}

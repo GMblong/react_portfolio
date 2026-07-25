@@ -2,8 +2,8 @@ import React from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
-import { introdata, meta } from "../../content_option";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const generateStars = (num) => {
   const stars = [];
@@ -19,7 +19,15 @@ const generateStars = (num) => {
 };
 
 export const Home = () => {
+  const { t, i18n } = useTranslation();
+  const introdata = t('introdata', { returnObjects: true });
+  const meta = t('meta', { returnObjects: true });
+
   console.log(introdata.your_img_url); // Untuk memastikan URL benar
+  
+  // Memaksa Typewriter merender ulang setiap kali bahasa berubah
+  const typeWriterKey = i18n.language; 
+
   return (
     <HelmetProvider>
       <section id="home" className="home">
@@ -44,25 +52,32 @@ export const Home = () => {
             <div className="align-self-center">
               <div className="intro mx-auto">
                 <h2 className="mb-1x">{introdata.title}</h2>
-                <h1 className="fluidz-48 mb-1x">
+                <h1 className="fluidz-48 mb-1x type-wrap">
+                  <span className="type-prefix">{t('home.prefix')} </span>
                   <Typewriter
+                    key={typeWriterKey}
                     options={{
                       strings: [
                         introdata.animated.first,
                         introdata.animated.second,
                         introdata.animated.third,
+                        introdata.animated.fourth,
+                        introdata.animated.fifth,
+                        introdata.animated.sixth,
                       ],
                       autoStart: true,
                       loop: true,
                       deleteSpeed: 10,
+                      wrapperClassName: "type-text",
+                      cursorClassName: "type-cursor"
                     }}
                   />
                 </h1>
-                <p className="mb-1x">{introdata.description}</p>
+                <p className="mb-1x intro-desc">{introdata.description}</p>
                 <div className="intro_btn-action pb-5">
                   <Link to="/about" className="text_2">
                     <div id="button_p" className="ac_btn btn ">
-                      About Me
+                      {t('home.btn_about')}
                       <div className="ring one"></div>
                       <div className="ring two"></div>
                       <div className="ring three"></div>
@@ -70,7 +85,7 @@ export const Home = () => {
                   </Link>
                   <Link to="/contact">
                     <div id="button_h" className="ac_btn btn">
-                      Contact
+                      {t('home.btn_contact')}
                       <div className="ring one"></div>
                       <div className="ring two"></div>
                       <div className="ring three"></div>

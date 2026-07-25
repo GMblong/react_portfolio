@@ -8,23 +8,28 @@ const meta = {
 const introdata = {
     title: "I’m Andi Arif R.",
     animated: {
-        first: "Innovative Graphic Designer",
-        second: "Creative Problem Solver",
-        third: "Passionate Web Developer",
+        first: "Creative Graphic Designer",
+        second: "Data-Driven Problem Solver",
+        third: "Tech-Savvy Web Developer",
     },
-    description: "Bachelor's in Informatics Engineering with experience in creative industry and IT. Skilled in graphic design and IT support. Ready to contribute to a dynamic, innovative environment.",
+    description: "Informatics Engineering graduate bridging the gap between creative design and IT solutions. Specialized in visual storytelling, technical support, and digital optimization. Ready to bring adaptable skills and innovative thinking to a dynamic team.",
     your_img_url: "/assets/images/profile.png",
 };
 
 const dataabout = {
     title: "Summary",
     greeting: "Hello everyone,",
-    aboutme: "I'm Andi, a driven digital marketer with a profound passion for crafting tailored advertising experiences. My professional journey in graphic design has honed my ability to analyze and optimize the effectiveness of online campaigns. I thrive on transforming complex data into actionable insights that enhance ad personalization and consumer engagement. Committed to continuous learning and improvement, I am eager to apply my skills to the role of Personalized Internet Ads Assessor, where I aim to contribute significantly to your team's success. Let's work together to push the boundaries of digital marketing and create innovative, impactful advertising that resonates.",
-    question: "Are you ready for this adventure?",
+    aboutme: "I'm Andi, a versatile professional with a strong foundation in IT and a creative edge in graphic design. My journey spans from hands-on IT support to crafting compelling digital marketing campaigns and evaluating AI data solutions. I excel at translating complex requirements into engaging, user-focused experiences. Driven by continuous learning and data-backed strategies, I am passionate about optimizing digital interactions—whether through design, ad personalization, or technical problem-solving. Let's collaborate to build impactful solutions that resonate and deliver results.",
+    question: "Ready to create something impactful together?",
 };
 
 const worktimeline = [{
-        jobtitle: "IT Support Technician",
+        jobtitle: "Automation Architect & Content Creator",
+        where: "YLive Studio",
+        date: "2025 - Present",
+    },
+    {
+        jobtitle: "IT Infrastructure & Solutions Specialist",
         where: "PT. Afresto Sistem Indonesia",
         date: "2020 - Present",
     },
@@ -44,35 +49,43 @@ const worktimeline = [{
         date: "2019 - 2019",
     },
     {
-        jobtitle: "Graphic design",
+        jobtitle: "Visual Brand Designer",
         where: "PT. Kaisa Rossie Tour & Travel",
         date: "2017 - 2020",
     },
 ];
 
 const skills = [{
-        name: "Javascript",
-        value: 75,
+        name: "IT Infrastructure & Support",
+        value: 90,
     },
     {
-        name: "React",
-        value: 70,
+        name: "HTML5, CSS3 & Responsive Design",
+        value: 90,
     },
     {
-        name: "PHP",
+        name: "Graphic Design & Visual Communication",
         value: 85,
     },
     {
-        name: "HTML",
-        value: 95,
+        name: "AI Prompt Engineering & Evaluation",
+        value: 85,
     },
     {
-        name: "CSS",
-        value: 90,
+        name: "PHP & Relational Databases (MySQL)",
+        value: 80,
     },
     {
-        name: "Graphic Design",
-        value: 90,
+        name: "Python (Data Processing & Scripting)",
+        value: 80,
+    },
+    {
+        name: "JavaScript (ES6+) & React.js",
+        value: 75,
+    },
+    {
+        name: "Digital Marketing Analytics & SEO",
+        value: 70,
     },
 ];
 
@@ -173,7 +186,7 @@ const dataportfolio = [{
 const contactConfig = {
     YOUR_EMAIL: "andiarifrahmatullah@gmail.com",
     YOUR_FONE: "+62 89609499706",
-    description: "Thank you for visiting my page. I'm glad to hear from you! Please feel free to reach out via email or phone if you have any questions or would like to discuss anything further. I look forward to potentially collaborating with you.",
+    description: "Thank you for stopping by! Whether you have a project in mind, need technical expertise, or just want to explore potential collaborations, I'm always open to new opportunities. Reach out via email or phone, and let's discuss how we can work together.",
     // creat an emailjs.com account 
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
     YOUR_SERVICE_ID: "service_78pt4qw",
@@ -183,7 +196,7 @@ const contactConfig = {
 
 const socialprofils = {
     github: "https://github.com/GMblong",
-    instagram: "https://instagram.com/andiarif__",
+    instagram: "https://www.instagram.com/proofimhere_?igsh=MXVvZjg3dHZrbWQ4NQ==",
     linkedin: "https://www.linkedin.com/in/andi-arif-rahmatullah-86722b176/",
     twitter: "https://x.com/anaknomordua_",
 };

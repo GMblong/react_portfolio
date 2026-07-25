@@ -1,7 +1,9 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import dayjs from 'dayjs';
+import { useTranslation } from 'react-i18next';
 
 const Ages = () => {
+  const { t } = useTranslation();
   const getAge = () =>
     (dayjs().diff('1998-12-06', 'milliseconds') / (365.25 * 24 * 60 * 60 * 1000)).toFixed(9);
 
@@ -17,7 +19,7 @@ const Ages = () => {
 
   const data = [
     {
-      title: 'Years',
+      title: t('about.age_title') === 'Waktu di Bumi' ? 'TAHUN' : (t('about.age_title') === '地球での時間' ? '年' : (t('about.age_title') === '在地球上的时间' ? '年' : 'YEARS')),
       link: '',
       value: age,
       icon: ''
