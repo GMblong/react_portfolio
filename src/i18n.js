@@ -20,7 +20,7 @@ const resources = {
           sixth: "Tech Generalist"
         },
         description: "My journey started in visual design, moved through AI data evaluation, and evolved into IT infrastructure and product architecture. I don't just specialize in one thing; I understand the whole stack. Whether I'm managing servers, writing code, or designing interfaces, my goal is always the same: build systems that actually work.",
-        your_img_url: "/assets/images/andi-dark.png",
+        your_img_url: "/assets/images/andi-light-nobg.png",
         your_img_url_light: "/assets/images/andi-light-nobg.png"
       },
       dataabout: {
@@ -91,7 +91,7 @@ const resources = {
           sixth: "Generalist Teknologi"
         },
         description: "Perjalanan saya bermula dari desain visual, merambah ke evaluasi data AI, hingga berevolusi menjadi arsitektur produk dan infrastruktur TI. Saya tidak hanya mendalami satu bidang; saya memahami keseluruhannya. Baik saat mengelola server, menulis kode, maupun merancang antarmuka, tujuan saya tetap sama: membangun sistem yang benar-benar berfungsi.",
-        your_img_url: "/assets/images/andi-dark.png",
+        your_img_url: "/assets/images/andi-light-nobg.png",
         your_img_url_light: "/assets/images/andi-light-nobg.png"
       },
       dataabout: {
@@ -176,7 +176,7 @@ const resources = {
           sixth: "テック・ジェネラリスト"
         },
         description: "私の歩みはビジュアルデザインから始まり、AIデータ評価を経て、ITインフラとプロダクトアーキテクチャへと進化しました。一つの分野に特化するのではなく、全体を理解しています。サーバー管理、コーディング、インターフェース設計のいずれにおいても、私の目標は常に一つです。それは「実際に機能するシステムを構築すること」です。",
-        your_img_url: "/assets/images/andi-dark.png",
+        your_img_url: "/assets/images/andi-light-nobg.png",
         your_img_url_light: "/assets/images/andi-light-nobg.png"
       },
       dataabout: {
@@ -261,7 +261,7 @@ const resources = {
           sixth: "全栈技术多面手"
         },
         description: "我的旅程始于视觉设计，随后进入 AI 数据评估领域，最终演变为 IT 基础设施和产品架构。我不局限于单一领域；我了解整个技术栈。无论是管理服务器、编写代码还是设计界面，我的目标始终如一：构建真正管用的系统。",
-        your_img_url: "/assets/images/andi-dark.png",
+        your_img_url: "/assets/images/andi-light-nobg.png",
         your_img_url_light: "/assets/images/andi-light-nobg.png"
       },
       dataabout: {
