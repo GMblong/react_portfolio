@@ -25,13 +25,24 @@ export const Home = () => {
   
   // State untuk theme (agar gambar bisa ganti)
   const [currentTheme, setCurrentTheme] = useState(document.documentElement.getAttribute('data-theme') || 'dark');
+  const [isGlitching, setIsGlitching] = useState(false);
 
   useEffect(() => {
     // Observer untuk memantau perubahan data-theme di elemen <html>
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         if (mutation.attributeName === 'data-theme') {
-          setCurrentTheme(document.documentElement.getAttribute('data-theme'));
+          const newTheme = document.documentElement.getAttribute('data-theme');
+          if (newTheme !== currentTheme) {
+            // Trigger glitch efek
+            setIsGlitching(true);
+            setTimeout(() => {
+              setCurrentTheme(newTheme);
+              setTimeout(() => {
+                setIsGlitching(false);
+              }, 400); // durasi efek akhir glitch
+            }, 300); // ganti gambar tepat di tengah glitch
+          }
         }
       });
     });
@@ -39,7 +50,7 @@ export const Home = () => {
     observer.observe(document.documentElement, { attributes: true });
 
     return () => observer.disconnect();
-  }, []);
+  }, [currentTheme]);
 
   console.log(introdata.your_img_url); // Untuk memastikan URL benar
   
@@ -59,7 +70,7 @@ export const Home = () => {
             {generateStars(100)}
           </div>
           <div
-            className="h_bg-image order-1 order-lg-2 h-100"
+            className={`h_bg-image order-1 order-lg-2 h-100 ${isGlitching ? 'img-glitching' : ''}`}
             style={{
               backgroundImage: `url(${currentTheme === 'light' ? introdata.your_img_url_light : introdata.your_img_url})`,
               position: "relative",

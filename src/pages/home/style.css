@@ -96,6 +96,21 @@ section {
     background-position: center;
     min-height: 700px;
     position: relative;
+    transition: filter 0.2s ease;
+}
+
+.img-glitching {
+    animation: glitch-anim 0.4s cubic-bezier(.25, .46, .45, .94) both infinite;
+    filter: contrast(150%) saturate(150%) hue-rotate(90deg) invert(20%);
+}
+
+@keyframes glitch-anim {
+    0% { transform: translate(0) }
+    20% { transform: translate(-5px, 5px) }
+    40% { transform: translate(-5px, -5px) }
+    60% { transform: translate(5px, 5px) }
+    80% { transform: translate(5px, -5px) }
+    100% { transform: translate(0) }
 }
 
 .ac_btn {
