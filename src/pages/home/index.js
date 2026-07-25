@@ -58,33 +58,14 @@ export const Home = () => {
           <div className="stars">
             {generateStars(100)}
           </div>
-          <div className="h_bg-image-wrapper order-1 order-lg-2 h-100" style={{ width: '50%', height: '100%', position: 'relative' }}>
-            {/* Image Dark Theme */}
+          <div className="h_bg-image-wrapper order-1 order-lg-2 h-100" style={{ width: '50%', height: '100%' }}>
             <div
               className="h_bg-image h-100"
               style={{
-                backgroundImage: `url(${introdata.your_img_url})`,
-                position: "absolute",
-                top: 0,
-                left: 0,
-                zIndex: 1,
-                width: '100%',
-                opacity: currentTheme === 'dark' ? 1 : 0,
-                transition: 'opacity 0.8s ease-in-out'
-              }}
-            ></div>
-            {/* Image Light Theme */}
-            <div
-              className="h_bg-image h-100"
-              style={{
-                backgroundImage: `url(${introdata.your_img_url_light})`,
-                position: "absolute",
-                top: 0,
-                left: 0,
-                zIndex: 2,
-                width: '100%',
-                opacity: currentTheme === 'light' ? 1 : 0,
-                transition: 'opacity 0.8s ease-in-out'
+                backgroundImage: `url(${currentTheme === 'light' ? introdata.your_img_url_light : introdata.your_img_url})`,
+                position: "relative",
+                zIndex: 1, // Ensure the background image is above the stars
+                width: '100%'
               }}
             ></div>
           </div>
