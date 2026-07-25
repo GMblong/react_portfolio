@@ -25,24 +25,13 @@ export const Home = () => {
   
   // State untuk theme (agar gambar bisa ganti)
   const [currentTheme, setCurrentTheme] = useState(document.documentElement.getAttribute('data-theme') || 'dark');
-  const [isGlitching, setIsGlitching] = useState(false);
 
   useEffect(() => {
     // Observer untuk memantau perubahan data-theme di elemen <html>
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         if (mutation.attributeName === 'data-theme') {
-          const newTheme = document.documentElement.getAttribute('data-theme');
-          if (newTheme !== currentTheme) {
-            // Trigger glitch efek
-            setIsGlitching(true);
-            setTimeout(() => {
-              setCurrentTheme(newTheme);
-              setTimeout(() => {
-                setIsGlitching(false);
-              }, 400); // durasi efek akhir glitch
-            }, 300); // ganti gambar tepat di tengah glitch
-          }
+          setCurrentTheme(document.documentElement.getAttribute('data-theme'));
         }
       });
     });
@@ -50,7 +39,7 @@ export const Home = () => {
     observer.observe(document.documentElement, { attributes: true });
 
     return () => observer.disconnect();
-  }, [currentTheme]);
+  }, []);
 
   console.log(introdata.your_img_url); // Untuk memastikan URL benar
   
@@ -69,14 +58,33 @@ export const Home = () => {
           <div className="stars">
             {generateStars(100)}
           </div>
-          <div className="h_bg-image-wrapper order-1 order-lg-2 h-100" style={{ width: '50%', height: '100%' }}>
+          <div className="h_bg-image-wrapper order-1 order-lg-2 h-100" style={{ width: '50%', height: '100%', position: 'relative' }}>
+            {/* Image Dark Theme */}
             <div
-              className={`h_bg-image h-100 ${isGlitching ? 'img-glitching' : ''}`}
+              className="h_bg-image h-100"
               style={{
-                backgroundImage: `url(${currentTheme === 'light' ? introdata.your_img_url_light : introdata.your_img_url})`,
-                position: "relative",
-                zIndex: 1, // Ensure the background image is above the stars
-                width: '100%'
+                backgroundImage: `url(${introdata.your_img_url})`,
+                position: "absolute",
+                top: 0,
+                left: 0,
+                zIndex: 1,
+                width: '100%',
+                opacity: currentTheme === 'dark' ? 1 : 0,
+                transition: 'opacity 0.8s ease-in-out'
+              }}
+            ></div>
+            {/* Image Light Theme */}
+            <div
+              className="h_bg-image h-100"
+              style={{
+                backgroundImage: `url(${introdata.your_img_url_light})`,
+                position: "absolute",
+                top: 0,
+                left: 0,
+                zIndex: 2,
+                width: '100%',
+                opacity: currentTheme === 'light' ? 1 : 0,
+                transition: 'opacity 0.8s ease-in-out'
               }}
             ></div>
           </div>
