@@ -4,6 +4,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import GlitchText from "../../components/GlitchText";
 
 const generateStars = (num) => {
   const stars = [];
@@ -80,7 +81,11 @@ export const Home = () => {
           <div className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-center">
             <div className="align-self-center">
               <div className="intro mx-auto">
-                <h2 className="mb-1x">{introdata.title}</h2>
+                <h2 className="mb-1x" style={{ fontSize: '3rem', fontWeight: '800' }}>
+                  <GlitchText speed={1.5} enableOnHover={true}>
+                    {introdata.title}
+                  </GlitchText>
+                </h2>
                 <h1 className="fluidz-48 mb-1x type-wrap">
                   <span className="type-prefix">{t('home.prefix')} </span>
                   <Typewriter
