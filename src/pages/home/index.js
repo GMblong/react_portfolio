@@ -4,7 +4,6 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useGlitch } from 'react-powerglitch';
 
 const generateStars = (num) => {
   const stars = [];
@@ -27,61 +26,6 @@ export const Home = () => {
   // State untuk theme (agar gambar bisa ganti)
   const [currentTheme, setCurrentTheme] = useState(document.documentElement.getAttribute('data-theme') || 'dark');
   const [isGlitching, setIsGlitching] = useState(false);
-
-  // Inisialisasi PowerGlitch untuk Image Hover
-  const glitch = useGlitch({
-    playMode: 'hover',
-    createContainers: true,
-    hideOverflow: false,
-    timing: {
-      duration: 1000,
-      iterations: Infinity,
-    },
-    glitchTimeSpan: {
-      start: 0,
-      end: 1,
-    },
-    shake: {
-      velocity: 15,
-      amplitudeX: 0.2,
-      amplitudeY: 0.2,
-    },
-    slice: {
-      count: 6,
-      velocity: 15,
-      minHeight: 0.02,
-      maxHeight: 0.15,
-      hueRotate: true,
-    },
-    pulse: false,
-  });
-
-  const glitchImage = useGlitch({
-    playMode: 'hover',
-    createContainers: true,
-    hideOverflow: false,
-    timing: {
-      duration: 1500,
-      iterations: Infinity,
-    },
-    glitchTimeSpan: {
-      start: 0,
-      end: 1,
-    },
-    shake: {
-      velocity: 10,
-      amplitudeX: 0.1,
-      amplitudeY: 0.1,
-    },
-    slice: {
-      count: 4,
-      velocity: 10,
-      minHeight: 0.05,
-      maxHeight: 0.2,
-      hueRotate: true,
-    },
-    pulse: false,
-  });
 
   useEffect(() => {
     // Observer untuk memantau perubahan data-theme di elemen <html>
@@ -125,7 +69,7 @@ export const Home = () => {
           <div className="stars">
             {generateStars(100)}
           </div>
-          <div className="h_bg-image-wrapper order-1 order-lg-2 h-100" ref={glitchImage.ref} style={{ width: '50%', height: '100%' }}>
+          <div className="h_bg-image-wrapper order-1 order-lg-2 h-100" style={{ width: '50%', height: '100%' }}>
             <div
               className={`h_bg-image h-100 ${isGlitching ? 'img-glitching' : ''}`}
               style={{
@@ -139,10 +83,8 @@ export const Home = () => {
           <div className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-center">
             <div className="align-self-center">
               <div className="intro mx-auto">
-                <h2 className="mb-1x" style={{ fontSize: '3rem', fontWeight: '800' }}>
-                  <span ref={glitch.ref}>
-                    {introdata.title}
-                  </span>
+                <h2 className="mb-1x intro-title">
+                  {introdata.title}
                 </h2>
                 <h1 className="fluidz-48 mb-1x type-wrap">
                   <span className="type-prefix">{t('home.prefix')} </span>
