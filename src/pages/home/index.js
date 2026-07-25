@@ -4,7 +4,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import GlitchText from "../../components/GlitchText";
+import { useGlitch } from 'react-powerglitch';
 
 const generateStars = (num) => {
   const stars = [];
@@ -27,6 +27,34 @@ export const Home = () => {
   // State untuk theme (agar gambar bisa ganti)
   const [currentTheme, setCurrentTheme] = useState(document.documentElement.getAttribute('data-theme') || 'dark');
   const [isGlitching, setIsGlitching] = useState(false);
+
+  // Inisialisasi PowerGlitch
+  const glitch = useGlitch({
+    playMode: 'hover',
+    createContainers: true,
+    hideOverflow: false,
+    timing: {
+      duration: 1000,
+      iterations: Infinity,
+    },
+    glitchTimeSpan: {
+      start: 0,
+      end: 1,
+    },
+    shake: {
+      velocity: 15,
+      amplitudeX: 0.2,
+      amplitudeY: 0.2,
+    },
+    slice: {
+      count: 6,
+      velocity: 15,
+      minHeight: 0.02,
+      maxHeight: 0.15,
+      hueRotate: true,
+    },
+    pulse: false,
+  });
 
   useEffect(() => {
     // Observer untuk memantau perubahan data-theme di elemen <html>
@@ -82,9 +110,9 @@ export const Home = () => {
             <div className="align-self-center">
               <div className="intro mx-auto">
                 <h2 className="mb-1x" style={{ fontSize: '3rem', fontWeight: '800' }}>
-                  <GlitchText speed={1.5} enableOnHover={true}>
+                  <span ref={glitch.ref}>
                     {introdata.title}
-                  </GlitchText>
+                  </span>
                 </h2>
                 <h1 className="fluidz-48 mb-1x type-wrap">
                   <span className="type-prefix">{t('home.prefix')} </span>
