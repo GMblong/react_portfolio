@@ -28,7 +28,7 @@ export const Home = () => {
   const [currentTheme, setCurrentTheme] = useState(document.documentElement.getAttribute('data-theme') || 'dark');
   const [isGlitching, setIsGlitching] = useState(false);
 
-  // Inisialisasi PowerGlitch
+  // Inisialisasi PowerGlitch untuk Image Hover
   const glitch = useGlitch({
     playMode: 'hover',
     createContainers: true,
@@ -51,6 +51,33 @@ export const Home = () => {
       velocity: 15,
       minHeight: 0.02,
       maxHeight: 0.15,
+      hueRotate: true,
+    },
+    pulse: false,
+  });
+
+  const glitchImage = useGlitch({
+    playMode: 'hover',
+    createContainers: true,
+    hideOverflow: false,
+    timing: {
+      duration: 1500,
+      iterations: Infinity,
+    },
+    glitchTimeSpan: {
+      start: 0,
+      end: 1,
+    },
+    shake: {
+      velocity: 10,
+      amplitudeX: 0.1,
+      amplitudeY: 0.1,
+    },
+    slice: {
+      count: 4,
+      velocity: 10,
+      minHeight: 0.05,
+      maxHeight: 0.2,
       hueRotate: true,
     },
     pulse: false,
@@ -98,14 +125,17 @@ export const Home = () => {
           <div className="stars">
             {generateStars(100)}
           </div>
-          <div
-            className={`h_bg-image order-1 order-lg-2 h-100 ${isGlitching ? 'img-glitching' : ''}`}
-            style={{
-              backgroundImage: `url(${currentTheme === 'light' ? introdata.your_img_url_light : introdata.your_img_url})`,
-              position: "relative",
-              zIndex: 1, // Ensure the background image is above the stars
-            }}
-          ></div>
+          <div className="h_bg-image-wrapper order-1 order-lg-2 h-100" ref={glitchImage.ref} style={{ width: '50%', height: '100%' }}>
+            <div
+              className={`h_bg-image h-100 ${isGlitching ? 'img-glitching' : ''}`}
+              style={{
+                backgroundImage: `url(${currentTheme === 'light' ? introdata.your_img_url_light : introdata.your_img_url})`,
+                position: "relative",
+                zIndex: 1, // Ensure the background image is above the stars
+                width: '100%'
+              }}
+            ></div>
+          </div>
           <div className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-center">
             <div className="align-self-center">
               <div className="intro mx-auto">
